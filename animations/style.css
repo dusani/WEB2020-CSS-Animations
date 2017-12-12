@@ -1,0 +1,40 @@
+/*.container{
+  display: flex;
+  justify-content: center;
+}*/
+
+.mage {
+  background-image: url(capguy-walk.png);
+  height: 325px;
+  width: 175px;
+  background-repeat: no-repeat;
+  position: absolute;
+
+  animation: walking 1s steps(8) 3.5,
+             move 3s linear 1 forwards;
+}
+
+@keyframes walking {
+  0%{
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1472px 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 83%;
+  }
+}
+
+.mage-reverse {
+
+  animation: walking 1s steps(8) 3.5,
+             move 3s linear 1 ;
+}
